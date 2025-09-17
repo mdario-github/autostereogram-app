@@ -6,11 +6,12 @@ Turn any image into a **3D autostereogram** (a "Magic Eye" picture) using MiDaS 
 
 ## 🚀 Features
 
-- Upload an image (`.jpg`, `.png`, `.jpeg`)
-- Generate a **depth map** using [MiDaS](https://github.com/isl-org/MiDaS) (monocular depth estimation)
-- Convert the depth map into a **random-dot autostereogram**
-- View the results directly in your browser
-- Download the generated autostereogram as a `.png`
+* Upload an image (`.jpg`, `.png`, `.jpeg`)
+* Generate a **depth map** using [MiDaS](https://github.com/isl-org/MiDaS) (monocular depth estimation)
+* Convert the depth map into a **random-dot autostereogram**
+* View the results directly in your browser
+* Download the generated autostereogram as a `.png`
+* Optional: Generate simple test images (circle, square, triangle) using `generate_examples.py`
 
 ---
 
@@ -43,6 +44,24 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 ---
 
+## 🧪 Generate test images
+
+You can generate simple geometric test images to try the app without uploading your own images:
+
+```bash
+python generate_examples.py
+```
+
+This will create three images in `assets/examples/`:
+
+* `circle.png`
+* `square.png`
+* `triangle.png`
+
+These images are perfect to test the depth map and autostereogram pipeline.
+
+---
+
 ## 🌐 Deployment
 
 You can deploy this app for free on:
@@ -60,11 +79,12 @@ Just connect your GitHub repo and deploy 🚀
 ```
 autostereogram-app/
 │── app.py                 # Streamlit app entry point
+│── generate_examples.py   # Utility to generate test images
 │── requirements.txt       # Dependencies
 │── src/
 │    ├── depthmap.py       # MiDaS-based depth map generation
 │    ├── stereogram.py     # Autostereogram generator
-│── assets/examples/       # Example images
+│── assets/examples/       # Generated test images
 │── README.md              # Documentation
 ```
 
