@@ -15,8 +15,7 @@ st.set_page_config(
 # --- App title and description ---
 st.title("🎨 Autostereogram Generator")
 st.write(
-    "Upload an image and transform it into a 3D autostereogram! "
-    "Use the depth estimation model MiDaS and a stereogram algorithm."
+    "Upload an image and transform it into a 3D autostereogram!"
 )
 
 # --- File uploader ---
@@ -34,7 +33,7 @@ if uploaded_file:
     if st.button("🔮 Generate autostereogram"):
         # Step 1: Generate depth map
         with st.spinner("Generating depth map with MiDaS..."):
-            depth_img = image_to_depthmap(uploaded_file, model_type="DPT_Hybrid")
+            depth_img = image_to_depthmap(uploaded_file, model_type="MiDaS_small")
 
         st.image(depth_img, caption="Generated depth map", use_column_width=True)
 
