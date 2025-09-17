@@ -44,24 +44,6 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 ---
 
-## 🧪 Generate test images
-
-You can generate simple geometric test images to try the app without uploading your own images:
-
-```bash
-python generate_examples.py
-```
-
-This will create three images in `assets/examples/`:
-
-* `circle.png`
-* `square.png`
-* `triangle.png`
-
-These images are perfect to test the depth map and autostereogram pipeline.
-
----
-
 ## 🌐 Deployment
 
 You can deploy this app for free on:
@@ -87,6 +69,24 @@ autostereogram-app/
 │── assets/examples/       # Generated test images
 │── README.md              # Documentation
 ```
+
+---
+
+## 🧪 Generate test images
+
+You can generate simple geometric test images to try the app without uploading your own images:
+
+```bash
+python generate_examples.py
+```
+
+This will create three images in `assets/examples/`:
+
+* `circle.png`
+* `square.png`
+* `triangle.png`
+
+These images are perfect to test the depth map and autostereogram pipeline.
 
 ---
 
