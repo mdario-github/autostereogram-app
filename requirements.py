@@ -1,1 +1,8 @@
 # Requirements for project
+
+streamlit
+torch
+torchvision
+torchaudio
+opencv-python
+pillow
